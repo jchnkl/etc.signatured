@@ -1,0 +1,6 @@
+[Unit]
+Description=Signature daemon
+
+[Service]
+Type=simple
+ExecStart=/bin/sh -c '${HOME}/.local/bin/signatured'

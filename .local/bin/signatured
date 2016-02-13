@@ -1,0 +1,27 @@
+#!/bin/sh
+
+if [ -z "$FORTUNES" ]; then
+  FORTUNES=
+fi
+
+if [ -z "$SIGNATURE" ]; then
+  SIGNATURE=$HOME/.signature
+fi
+
+if [ ! -e "$SIGNATURE" ]; then
+  echo "$SIGNATURE does not exist"
+  exit 1
+fi
+
+if [ ! -x "$(which fortune)" ]; then
+  exit 1
+fi
+
+if [ ! -x "$(which inotifywait)" ]; then
+  exit 1
+fi
+
+inotifywait -m -e access ${SIGNATURE} | \
+    while read file; do
+      fortune ${FORTUNES} > $SIGNATURE
+    done

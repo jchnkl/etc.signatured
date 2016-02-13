@@ -1,0 +1,8 @@
+*
+!/.config
+!/.config/systemd
+!/.config/systemd/user
+!/.config/systemd/user/signatured.service
+!/.local
+!/.local/bin
+!/.local/bin/signatured
