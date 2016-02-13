@@ -1,8 +1,4 @@
 *
-!/.config
-!/.config/systemd
-!/.config/systemd/user
 !/.config/systemd/user/signatured.service
-!/.local
-!/.local/bin
+!/.gitignore.d/signatured
 !/.local/bin/signatured
