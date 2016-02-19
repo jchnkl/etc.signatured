@@ -3,4 +3,5 @@ Description=Signature daemon
 
 [Service]
 Type=simple
+Environment=FORTUNES=/home/jrk/prj/fortunes-personal
 ExecStart=/bin/sh -c '${HOME}/.local/bin/signatured'
