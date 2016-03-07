@@ -5,3 +5,6 @@ Description=Signature daemon
 Type=simple
 Environment=FORTUNES=/home/jrk/prj/fortunes-personal
 ExecStart=/bin/sh -c '${HOME}/.local/bin/signatured'
+
+[Install]
+WantedBy=default.target
